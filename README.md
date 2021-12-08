@@ -1,5 +1,6 @@
 # Classificació Binària de 17.7K cançons Angleses d'entre el 2008 i 2017
 Linck: https://www.kaggle.com/rashikrahmanpritom/177k-english-song-data-from-20082017
+
 (Aquest document a estat generat a partir de **Codi.ipynb** on trobareu tot el codi utilitzat)
 ## Objectiu
 Poder classificar cançons entre els estils (Gèneres) de Rock i de Hip-Hop
@@ -27,9 +28,9 @@ sklearn
 ```
 
 ## Anàlisis dels atributs:
-
+```
  Dimensionalitat de la BBDD: (17734, 21)
-    
+```
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -309,7 +310,7 @@ Així que també el treure'm del nostre dataset.
 També traurem atributs que són irrellevants com; **track_id**, **number**, **date_created**, **license** i **title**
 
 
-Dimensionalitat de la BBDD: (17714, 9)
+    Dimensionalitat de la BBDD: (17714, 9)
     
 
 <table border="1" class="dataframe">
@@ -417,7 +418,6 @@ Llegirem el primer valor del String, l'aïllarem i el passarem a Int. Això ho f
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th></th>
       <th>bit_rate</th>
       <th>comments</th>
       <th>duration</th>
@@ -428,23 +428,9 @@ Llegirem el primer valor del String, l'aïllarem i el passarem a Int. Això ho f
       <th>interest</th>
       <th>listens</th>
     </tr>
-    <tr>
-      <th>genre_top</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" valign="top">Hip-Hop</th>
       <th>0</th>
       <td>320000</td>
       <td>0</td>
@@ -518,28 +504,19 @@ Aquests atributs són; **genres_all** i **bit_rate**.
 
 Però més endavant veurem els resultats de combinar els atributs **genres_all** i **genres**
 
-Dimensionalitat de la BBDD: (7104, 3)
+      Dimensionalitat de la BBDD: (7104, 3)
     
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th></th>
       <th>genre_top</th>
       <th>genres_all</th>
       <th>bit_rate</th>
     </tr>
-    <tr>
-      <th>genre_top</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" valign="top">Hip-Hop</th>
       <th>0</th>
       <td>1</td>
       <td>21</td>
@@ -595,7 +572,6 @@ Observem que utilitzar els mètodes d'hiperplans, obtenim una millor classificac
 Com podem veure, les classificacions lineals sembla que no són les més indicades, en canvi les que compten amb una Lambda (Λ) major, ens generen una classificació més encertada. Tot i això i per asseguren-se, també generarem un rànquing amb els mètodes segons el seu radi d'encert amb la classificació.
 
 
-</style>
 <table id="T_c00bb_">
   <thead>
     <tr>
@@ -741,22 +717,13 @@ Un cop vist això deixarem d'utilitzar l'atribut **bit_rate** que té una correl
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th></th>
       <th>genre_top</th>
       <th>genres</th>
       <th>genres_all</th>
     </tr>
-    <tr>
-      <th>genre_top</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" valign="top">Hip-Hop</th>
       <th>0</th>
       <td>1</td>
       <td>21</td>
